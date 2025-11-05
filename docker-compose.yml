@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:15
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: cars
+    ports:
+      - '5432:5432'
+    volumes:
+      - db-data:/var/lib/postgresql/data
+  app:
+    build: .
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://user:pass@db:5432/cars
+      NEXTAUTH_URL: http://localhost:3000
+      NEXTAUTH_SECRET: super-secret
+    ports:
+      - '3000:3000'
+    command: pnpm dev
+    volumes:
+      - .:/app
+volumes:
+  db-data:
