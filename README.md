@@ -36,6 +36,11 @@ Production-ready MVP for AI-assisted car classifieds inspired by xe.gr. Built wi
    docker compose up -d
    ```
 
+   > **Tip:** On older Docker Desktop installs that still ship the legacy
+   > `docker-compose` binary, run `docker-compose up -d` instead. The error
+   > `unknown shorthand flag: 'd'` means your CLI has not enabled the
+   > `docker compose` subcommand yet.
+
 3. Install dependencies and run migrations:
 
    ```bash
