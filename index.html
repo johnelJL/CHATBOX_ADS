@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClassifAI Cars</title>
+    <meta
+      name="description"
+      content="AI-assisted car classifieds platform for creating and browsing trustworthy listings"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="container nav-content">
+        <a class="brand" href="#hero" aria-label="ClassifAI Cars home">
+          <span class="brand-badge">AI</span>
+          <span class="brand-text">ClassifAI Cars</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="#features">Features</a>
+          <a href="#listings">Listings</a>
+          <a href="#create">Create</a>
+          <a href="#admin">Moderation</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="ghost" data-action="toggle-theme" type="button">Toggle theme</button>
+          <a class="primary" href="#create">Start selling</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="container hero-content">
+          <div class="hero-copy">
+            <p class="hero-eyebrow">AI-powered car classifieds</p>
+            <h1>The fastest way to publish a trustworthy car listing</h1>
+            <p>
+              Upload photos, answer a few AI-assisted questions, and publish a polished listing with
+              confidence-backed specs and safety checks in minutes.
+            </p>
+            <div class="hero-actions">
+              <a class="primary" href="#create">Create listing</a>
+              <a class="secondary" href="#listings">Browse listings</a>
+            </div>
+            <dl class="hero-stats" aria-label="Platform highlights">
+              <div>
+                <dt>Avg. listing time</dt>
+                <dd><span data-stat="avg-time">6m</span></dd>
+              </div>
+              <div>
+                <dt>Verified sellers</dt>
+                <dd><span data-stat="verified">2.4k</span></dd>
+              </div>
+              <div>
+                <dt>AI redactions applied</dt>
+                <dd><span data-stat="redactions">18k</span></dd>
+              </div>
+            </dl>
+          </div>
+          <aside class="hero-preview" aria-hidden="true">
+            <div class="preview-card">
+              <h2>Vision analysis</h2>
+              <p>Identify make, model, year clues, and auto-redact number plates.</p>
+              <ul class="preview-steps">
+                <li>
+                  <span class="step">1</span>
+                  <span>Upload exterior and interior photos.</span>
+                </li>
+                <li>
+                  <span class="step">2</span>
+                  <span>Let ClassifAI highlight standout details.</span>
+                </li>
+                <li>
+                  <span class="step">3</span>
+                  <span>Publish with confidence-backed specs.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="preview-grid">
+              <div class="preview-tile"></div>
+              <div class="preview-tile"></div>
+              <div class="preview-tile"></div>
+              <div class="preview-tile"></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="container">
+          <h2>Everything you need to turn photos into polished ads</h2>
+          <div class="feature-grid">
+            <article>
+              <h3>Vision analysis</h3>
+              <p>
+                Detect model clues, condition flags, and redact plates before they reach the public marketplace.
+              </p>
+            </article>
+            <article>
+              <h3>Targeted Q&amp;A</h3>
+              <p>
+                Guided prompts collect mileage, history, extras, and pricing data tailored to your vehicle profile.
+              </p>
+            </article>
+            <article>
+              <h3>Publish-ready copy</h3>
+              <p>
+                Generate a concise, honest ad with bullet highlights, safety disclaimers, and translation support.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="insights">
+        <div class="container insights-grid">
+          <article>
+            <h2>Real-time insight widgets</h2>
+            <p>
+              Our AI co-pilot surfaces pricing guidance, mileage alignment, and ownership risks as you upload assets. Every
+              suggestion is logged for transparency and easy hand-off to your team.
+            </p>
+            <ul>
+              <li>Condition detection &amp; plate redaction.</li>
+              <li>Market benchmark with confidence scores.</li>
+              <li>Readable copy tuned for conversion.</li>
+            </ul>
+          </article>
+          <div class="insight-cards" aria-hidden="true">
+            <div class="insight-card">
+              <p>AI Safety Review</p>
+              <span class="pill">Passed</span>
+              <ul>
+                <li>90% photo coverage</li>
+                <li>0 high-risk findings</li>
+                <li>VIN verified</li>
+              </ul>
+            </div>
+            <div class="insight-card">
+              <p>Market guidance</p>
+              <span class="price">€23,900 &plusmn; 1,200</span>
+              <small>Based on 1,028 comparable listings</small>
+            </div>
+            <div class="insight-card">
+              <p>Copy preview</p>
+              <blockquote>
+                Sporty hatchback with full service history, adaptive cruise control, and brand new tires.
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="listings" class="listings">
+        <div class="container">
+          <header class="section-header">
+            <div>
+              <h2>Live marketplace</h2>
+              <p>Browse AI-enriched listings curated for transparency.</p>
+            </div>
+            <div class="controls" role="group" aria-label="Listing filters">
+              <input id="search" type="search" placeholder="Search by make, model, or keyword" />
+              <select id="status-filter" aria-label="Filter by status">
+                <option value="all">All statuses</option>
+                <option value="active">Active</option>
+                <option value="pending">Pending review</option>
+                <option value="flagged">Safety flagged</option>
+              </select>
+              <select id="sort-order" aria-label="Sort listings">
+                <option value="recommended">Recommended</option>
+                <option value="newest">Newest</option>
+                <option value="price-low">Lowest price</option>
+                <option value="price-high">Highest price</option>
+                <option value="mileage-low">Lowest mileage</option>
+                <option value="mileage-high">Highest mileage</option>
+              </select>
+            </div>
+          </header>
+
+          <div class="listing-grid" data-listings></div>
+          <p class="empty-state" data-empty hidden>
+            No listings found. Try adjusting your filters or be the first to submit a car.
+          </p>
+        </div>
+      </section>
+
+      <section id="create" class="create">
+        <div class="container create-grid">
+          <div>
+            <h2>List your car in three guided steps</h2>
+            <ol class="stepper">
+              <li>
+                <h3>Upload media</h3>
+                <p>Drag &amp; drop photos—AI will redact sensitive details automatically.</p>
+              </li>
+              <li>
+                <h3>Answer smart prompts</h3>
+                <p>We only ask what is missing, tailored to your make, model, and trim.</p>
+              </li>
+              <li>
+                <h3>Publish confidently</h3>
+                <p>Get a publish-ready description, pricing guidance, and safety checklist.</p>
+              </li>
+            </ol>
+          </div>
+          <form id="listing-form" class="card" autocomplete="off">
+            <fieldset>
+              <legend>Add a demo listing</legend>
+              <div class="field">
+                <label for="title">Listing title</label>
+                <input id="title" name="title" required placeholder="e.g. 2019 Audi A3 Sportback" />
+              </div>
+              <div class="field-grid">
+                <div class="field">
+                  <label for="price">Price (€)</label>
+                  <input id="price" name="price" type="number" min="0" required />
+                </div>
+                <div class="field">
+                  <label for="mileage">Mileage (km)</label>
+                  <input id="mileage" name="mileage" type="number" min="0" required />
+                </div>
+              </div>
+              <div class="field-grid">
+                <div class="field">
+                  <label for="year">Year</label>
+                  <input id="year" name="year" type="number" min="1990" max="2024" required />
+                </div>
+                <div class="field">
+                  <label for="location">Location</label>
+                  <input id="location" name="location" required placeholder="City" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="highlights">Highlights</label>
+                <textarea
+                  id="highlights"
+                  name="highlights"
+                  rows="3"
+                  placeholder="Comma-separated extras (e.g. Adaptive cruise, Wireless CarPlay)"
+                ></textarea>
+              </div>
+              <div class="field">
+                <label for="description">Additional notes</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  rows="3"
+                  placeholder="Tell buyers about service history, ownership, or extras"
+                ></textarea>
+              </div>
+              <button class="primary" type="submit">Generate AI summary</button>
+              <p class="form-footnote" data-form-status>AI draft ready in under 10 seconds.</p>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <section id="admin" class="admin">
+        <div class="container admin-grid">
+          <div>
+            <h2>Moderation queue</h2>
+            <p>
+              Review AI-suggested flags, approve safe listings, and request revisions. Every action feeds our safety model for
+              future submissions.
+            </p>
+            <dl class="admin-stats" aria-label="Moderation metrics">
+              <div>
+                <dt>Pending review</dt>
+                <dd data-stat="pending">0</dd>
+              </div>
+              <div>
+                <dt>Safety flagged</dt>
+                <dd data-stat="flagged">0</dd>
+              </div>
+              <div>
+                <dt>Approved today</dt>
+                <dd data-stat="approved">0</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="card admin-queue">
+            <header>
+              <h3>Queue</h3>
+              <button class="ghost" type="button" data-action="seed-data">Seed demo data</button>
+            </header>
+            <ul data-queue></ul>
+            <p class="empty-state" data-empty-queue hidden>No items pending moderation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container cta-content">
+          <h2>Launch an AI-assisted classifieds experience today</h2>
+          <p>
+            Bring trustworthy listings to your marketplace with guided data capture, risk scoring, and flexible moderation tools.
+          </p>
+          <div>
+            <a class="primary" href="#create">Create a listing</a>
+            <a class="secondary" href="#admin">Review moderation</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand">
+            <span class="brand-badge">AI</span>
+            <span class="brand-text">ClassifAI Cars</span>
+          </div>
+          <p>Built with transparency-first AI workflows.</p>
+        </div>
+        <div>
+          <h3>Product</h3>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#listings">Marketplace</a></li>
+            <li><a href="#admin">Moderation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#create">Getting started</a></li>
+            <li><a href="#admin">Safety handbook</a></li>
+            <li><a href="#hero">Platform overview</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Stay in the loop</h3>
+          <form class="inline-form">
+            <label class="sr-only" for="newsletter-email">Email address</label>
+            <input id="newsletter-email" type="email" placeholder="you@example.com" required />
+            <button class="primary" type="submit">Notify me</button>
+          </form>
+        </div>
+      </div>
+      <p class="legal">&copy; <span id="year"></span> ClassifAI Cars. All rights reserved.</p>
+    </footer>
+
+    <dialog id="listing-dialog">
+      <article class="card dialog-card">
+        <header>
+          <h3 data-dialog-title></h3>
+          <button class="ghost" type="button" data-close-dialog aria-label="Close dialog">Close</button>
+        </header>
+        <div class="dialog-body">
+          <p class="dialog-meta" data-dialog-meta></p>
+          <ul class="pill-list" data-dialog-highlights></ul>
+          <p data-dialog-description></p>
+          <div class="dialog-insights">
+            <h4>AI insights</h4>
+            <ul data-dialog-insights></ul>
+          </div>
+        </div>
+        <footer>
+          <button class="secondary" type="button" data-close-dialog>Close</button>
+        </footer>
+      </article>
+    </dialog>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
